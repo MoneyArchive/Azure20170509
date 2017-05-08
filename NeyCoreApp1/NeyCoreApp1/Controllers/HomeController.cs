@@ -10,6 +10,9 @@ namespace NeyCoreApp1.Controllers
     {
         public IActionResult Index()
         {
+            var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+            ViewBag.osNameAndVersion = osNameAndVersion;
+
             return View();
         }
 
